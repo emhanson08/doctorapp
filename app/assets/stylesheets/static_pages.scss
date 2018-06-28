@@ -1,0 +1,13 @@
+.nav-item {
+	display: flex;
+	flex-flow: column nowrap;
+	padding: 16px;
+	text-align: center;
+	text-decoration: none;
+	color: steelblue;
+	transition: 0.2s ease-out;
+
+	&:hover {
+		padding-top: 8px;
+	}
+}

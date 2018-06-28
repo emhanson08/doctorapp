@@ -1,0 +1,17 @@
+
+.search-results-table {
+	border-collapse: collapse;
+	margin: 8px 16px;
+	padding: 8px;
+
+	.table-header-rows-data {
+		border: 1px solid lightgray;
+		text-align: left;
+		padding: 8px;
+		font-family: 'Muli', sans-serif;
+	}
+
+	.search-row:nth-child(even) {
+		background-color: #dddddd;
+	}
+}

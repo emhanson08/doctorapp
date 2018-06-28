@@ -1,0 +1,24 @@
+<div>
+	<%= link_to doctors_path, class: 'go-back-btn' do %>
+		<i class="fas fa-arrow-circle-left"></i>
+		<span>Back To Search</span>
+	<% end %>
+</div>
+
+<div>
+	<p class='doctor-header doc-weight'><%= @doctor.name %></p>
+	<p class='doctor-item doc-weight'><%= @doctor.location %></p>
+	<p class='doctor-item'><%= @doctor.specialty %></p>
+	<p class='doctor-item doc-weight'>Rating:</p>
+	<p class='doctor-item'><%= @doctor.rating %></p>
+	<p class='doctor-item doc-weight'>About <%= @doctor.name %>:</p>
+	<p class='doctor-item' id='doc-description'><%= @doctor.description %></p>
+	<hr>
+</div>
+
+<div>
+	<h2 class='similar-providers-heading'>Similar Providers</h2>
+	<% @doctor.find_similar_providers(@doctor).each do |doc| %>
+		<p><%= link_to "#{doc.name}", doctor_path(doc), class: 'similar-providers-item' %> - Rating of  <%= doc.rating %></p>
+	<% end %>
+</div>

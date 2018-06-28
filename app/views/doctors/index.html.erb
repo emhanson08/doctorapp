@@ -1,0 +1,13 @@
+<div>
+	<%= link_to root_path, class: 'go-back-btn' do %>
+		<i class="fas fa-arrow-circle-left"></i>
+		<span>Go Back</span>
+	<% end %>
+</div>
+
+<h1 class='search-header'>Find A Doctor</h1>
+
+<%= form_tag(search_doctors_path, method: :get, id: 'search-form') do %>
+	<%= text_field_tag :search, params[:search], placeholder: "Search Doctors", class: 'search-style' %>
+	<%= submit_tag 'Search', name: nil, class: 'search-button' %>
+<% end %>

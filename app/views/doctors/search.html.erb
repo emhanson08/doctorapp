@@ -1,0 +1,37 @@
+<div>
+	<%= link_to doctors_path, class: 'go-back-btn' do %>
+		<i class="fas fa-arrow-circle-left"></i>
+		<span>Go Back</span>
+	<% end %>
+</div>
+
+<h1 class='search-results-header'>Results</h1>
+
+<% if @doctors.blank? %>
+	<h4 class='no-results'>There were no records matching your search</h4>
+<% else %>
+
+	<table class='search-results-table'>
+		<tbody class='table-headers-rows-data'>
+			<tr class='search-row'>
+				<th>Name</th>
+				<th>Location</th>
+				<th>Specialty</th>
+			</tr>
+
+			<% @doctors.each do |doctor| %>
+				<tr>
+					<td>
+						<%= link_to "#{doctor.name}", doctor_path(doctor), class: 'name-link' %>
+					</td>
+					<td>
+						<%= doctor.location %>
+					</td>
+					<td>
+						<%= doctor.specialty %>
+					</td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+<% end %>
