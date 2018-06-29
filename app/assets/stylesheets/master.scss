@@ -1,3 +1,5 @@
+@import 'bootstrap';
+
 .nav-item {
 	display: flex;
 	flex-flow: column nowrap;
@@ -160,4 +162,30 @@ h1 {
 
 .doc-weight {
 	font-weight: 1000;
+}
+
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 black;
+  -webkit-box-shadow: 1px 1px 2px 0 black;
+  box-shadow: 1px 1px 2px 0 black;
+  background: white;
+  border: 1px solid black;
+  border-color: black;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
+  color: black;
+}
+
+.new-doctor-link {
+	margin: 0 auto;
+	margin-top: 20px;
+	display: block;
+	width: 300px;
+	padding-top: 5px;
+	text-decoration: none;
+	color: steelblue;
+	text-align: center;
+	font-size: 35px;
+	
 }

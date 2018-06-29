@@ -3,8 +3,13 @@ class DoctorsController < ApplicationController
 		@doctors = Doctor.all
 	end
 
+	def new
+		@doctor = Doctor.new
+	end
+
 	def create
 		@doctor = Doctor.create(doctor_params)
+		redirect_to doctors_path
 	end
 
 	def show

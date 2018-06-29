@@ -1,0 +1,11 @@
+<div class='booyah-box col-10 offset-1'>
+	<h1>New Doctor Form</h1>
+	<%= simple_form_for @doctor do |f| %>
+		<%= f.input :name %>
+		<%= f.input :location %>
+		<%= f.input :specialty %>
+		<%= f.input :rating %>
+		<%= f.input :description %>
+		<%= f.submit 'Submit' %>
+	<% end %>
+</div>

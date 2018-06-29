@@ -11,3 +11,5 @@
 	<%= text_field_tag :search, params[:search], placeholder: "Search Doctors", class: 'search-style' %>
 	<%= submit_tag 'Search', name: nil, class: 'search-button' %>
 <% end %>
+
+<%= link_to 'Add A Doctor', new_doctor_path, class: 'new-doctor-link' %>
